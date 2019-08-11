@@ -2,14 +2,9 @@ import React, { Component } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/authActions";
-import Modal from "./Modal/Modal";
 import "./SideNav.scss";
 
 class SideNav extends Component {
-  state = {
-    modal: false,
-    edit: false
-  }
   
   onLogoutClick = e => {
     this.props.logoutUser();
