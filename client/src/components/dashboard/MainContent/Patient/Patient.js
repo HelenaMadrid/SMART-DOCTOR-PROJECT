@@ -132,7 +132,6 @@ class Patient extends Component {
 
   componentDidMount() {
     this.props.getPatient(this.props.match.params.patient);
-    // window.location.reload();
   }
 
   componentDidUpdate(prevProps) {
@@ -155,7 +154,7 @@ class Patient extends Component {
     ) {
 
       const { patient } = this.props;
-
+      console.log(this.state.modal);
       return (
         <div className="main-content">
           <h1 className="patient-header">{patient.name}</h1>
