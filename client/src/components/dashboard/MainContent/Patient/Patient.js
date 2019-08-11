@@ -55,15 +55,7 @@ class Patient extends Component {
     this.setState({ modal: !this.state.modal, edit: false });
   };
 
-  toggleEditModal = (name, age, sex, height, weight,
-    diabetesMellitus,
-    cancer, 
-    hipertensionArterial, 
-    litiasisRenal, hipotiroidismo, hipertiroidismo, dislipidemia, 
-    ingestaActualMedicamentos, cirugias, transfusiones,
-    hepatitis,
-    diabetesMellitusPersonal, litiasisRenalPersonal, hipotiroidismoPersonal, hipertiroidismoPersonal, bebidasAlcoholicas, drogas, realizaEjercicio, tabaquismo, menarca, gestaciones, continuaMenstruando, edadDejoMenstruar, embarazo, dificultadEmbarazo, 
-    id, owner, e) => {
+  toggleEditModal = (name, age, sex, height, weight, diabetesMellitus, cancer, hipertensionArterial, litiasisRenal, hipotiroidismo, hipertiroidismo, dislipidemia, ingestaActualMedicamentos, cirugias, transfusiones, hepatitis, diabetesMellitusPersonal, litiasisRenalPersonal, hipotiroidismoPersonal, hipertiroidismoPersonal, bebidasAlcoholicas, drogas, realizaEjercicio, tabaquismo, menarca, gestaciones, continuaMenstruando, edadDejoMenstruar, embarazo, dificultadEmbarazo, id, owner, e) => {
     e.stopPropagation();
     this.setState({
       modal: !this.state.modal,
