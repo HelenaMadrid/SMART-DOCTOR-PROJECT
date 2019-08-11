@@ -2,10 +2,15 @@ import React, { Component } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/authActions";
-
+import Modal from "./Modal/Modal";
 import "./SideNav.scss";
 
 class SideNav extends Component {
+  state = {
+    modal: false,
+    edit: false
+  }
+  
   onLogoutClick = e => {
     this.props.logoutUser();
   };
@@ -25,12 +30,15 @@ class SideNav extends Component {
     rightSideRight.classList.add("right-top-visibile");
   };
 
+  onSelected = e =>{
+    window.location.reload();
+  }
   render() {
     const { patients } = this.props.patients;
 
-   let patientData = patients.sort().map(patient => (
+    let patientData = patients.sort().map(patient => (
       <li className="patient-listing" key={patient._id}>
-        <Link to={`/patients/${patient._id}`}>{patient.name}</Link>
+        <Link to={`/patients/${patient._id}`} onClick={this.onSelected}>{patient.name}</Link>
       </li>
     ));
 

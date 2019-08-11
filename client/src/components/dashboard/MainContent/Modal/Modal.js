@@ -43,7 +43,6 @@ class Modal extends Component {
     edadDejoMenstruar: "",
     embarazo: false,
     dificultadEmbarazo: false
-
   };
 
   componentWillReceiveProps(nextProps) {
@@ -242,10 +241,6 @@ class Modal extends Component {
     }
   };
 
-  onSelectChange = e => {
-    this.setState({ [e.target.id]: e.target.value });
-  };
-
   render() {
     if (!this.props.modal) {
       return null;
@@ -268,11 +263,7 @@ class Modal extends Component {
       this.props.patient.antecedentesPersonalesPatologicos
       &&
       this.props.patient.antecedentesGinecologicos) {
-      console.log(this.props.patient.antecedentesFamiliares);
-      console.log(this.props.patient.antecedentesFamiliares.diabetesMellitus);
-      // const { patient } = this.props;
-      // const { antecedentesFamiliares, antecedentesGinecologicos, antecedentesPersonalesNoPatologicos, antecedentesPersonalesPatologicos } = patient;
-
+  
       return (
         <div className="modal">
           <span className="close-modal" onClick={this.onClose}>

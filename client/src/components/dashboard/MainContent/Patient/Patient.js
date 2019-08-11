@@ -140,18 +140,6 @@ class Patient extends Component {
     }
   }
 
-  // onChange = async e => {
-  //   await this.setState({ patients: this.props.patients.patient });
-
-  //   let patient = await [...this.state.patient];
-
-  //   await alert(patient[e.target.id].name);
-
-  //   patient[e.target.id].name = await e.target.value;
-
-  //   await this.setState({ patient });
-  // };
-
   render() {
     if (
       this.props.patient
@@ -163,21 +151,9 @@ class Patient extends Component {
       this.props.patient.antecedentesPersonalesPatologicos
       &&
       this.props.patient.antecedentesGinecologicos
-      // !this.props.patients.patientLoading
     ) {
 
       const { patient } = this.props;
-      // const { antecedentesFamiliares, antecedentesGinecologicos, antecedentesPersonalesNoPatologicos, antecedentesPersonalesPatologicos } = patient;
-      console.log(patient);
-      // console.log(antecedentesFamiliares);
-      // console.log(antecedentesFamiliares.cancer);
-      // console.log(antecedentesGinecologicos.embarazo);
-      // console.log(antecedentesPersonalesNoPatologicos.drogas);
-      console.log("litiasis renal personal "+patient.antecedentesPersonalesPatologicos.litiasisRenal);
-      // console.log(historiaClinica);
-      // console.log(patient.historiaClinica);
-      // console.log(historiaClinica);
-      // console.log(antecedentesFamiliares.cancer);
 
       return (
         <div className="main-content">
