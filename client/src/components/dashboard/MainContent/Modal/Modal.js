@@ -200,7 +200,7 @@ class Modal extends Component {
       sex: "",
       height: "",
       weight: "",
-      diabatesMellitus: false,
+      diabetesMellitus: false,
       cancer: false,
       hipertensionArterial: false,
       litiasisRenal: false,

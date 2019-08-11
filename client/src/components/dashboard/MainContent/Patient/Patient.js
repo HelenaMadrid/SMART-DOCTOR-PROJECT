@@ -138,6 +138,7 @@ class Patient extends Component {
     console.log("afuera");
     if (this.props.match.params.patient !== prevProps.match.params.patient) {
       console.log("adentro");
+      this.setState({ modal: false});
       this.props.getPatient(this.props.match.params.patient);
       
     }
