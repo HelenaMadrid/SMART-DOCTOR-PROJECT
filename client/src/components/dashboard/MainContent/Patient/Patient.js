@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getPatient } from "../../../../actions/patientsActions";
-// import JSONPretty from 'react-json-pretty';
-
-
 import Spinner from "../../../common/Spinner";
 import Modal from "../Modal/Modal";
 
 import "../MainContent.scss";
 import "./Patient.scss";
-// import { timingSafeEqual } from "crypto";
 
 
 class Patient extends Component {
