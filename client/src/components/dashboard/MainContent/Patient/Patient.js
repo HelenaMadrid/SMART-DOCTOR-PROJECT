@@ -132,6 +132,7 @@ class Patient extends Component {
 
   componentDidMount() {
     this.props.getPatient(this.props.match.params.patient);
+    this.setState({modal: false});
   }
 
   componentDidUpdate(prevProps) {
