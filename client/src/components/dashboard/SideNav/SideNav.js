@@ -25,9 +25,6 @@ class SideNav extends Component {
     rightSideRight.classList.add("right-top-visibile");
   };
 
-  // onSelected = e =>{
-  //   window.location.reload();
-  // }
   render() {
     const { patients } = this.props.patients;
 

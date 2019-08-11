@@ -131,8 +131,8 @@ class Patient extends Component {
   }
 
   componentDidMount() {
-    this.forceUpdate();
     this.props.getPatient(this.props.match.params.patient);
+    window.location.reload();
   }
 
   componentDidUpdate(prevProps) {
