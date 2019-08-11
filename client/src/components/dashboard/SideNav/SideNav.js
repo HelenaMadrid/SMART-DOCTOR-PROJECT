@@ -25,15 +25,15 @@ class SideNav extends Component {
     rightSideRight.classList.add("right-top-visibile");
   };
 
-  onSelected = e =>{
-    window.location.reload();
-  }
+  // onSelected = e =>{
+  //   window.location.reload();
+  // }
   render() {
     const { patients } = this.props.patients;
 
     let patientData = patients.sort().map(patient => (
       <li className="patient-listing" key={patient._id}>
-        <Link to={`/patients/${patient._id}`} onClick={this.onSelected}>{patient.name}</Link>
+        <Link to={`/patients/${patient._id}`}>{patient.name}</Link>
       </li>
     ));
 

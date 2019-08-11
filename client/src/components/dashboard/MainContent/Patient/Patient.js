@@ -131,6 +131,7 @@ class Patient extends Component {
   }
 
   componentDidMount() {
+    this.forceUpdate();
     this.props.getPatient(this.props.match.params.patient);
   }
 
@@ -239,21 +240,6 @@ class Patient extends Component {
             />
           </div>
 
-          {/* <div className="tasks-container">
-            <div className="patients-first-row">
-              <button
-                className="main-btn add-btn"
-                onClick={this.toggleTaskModal}
-              >
-                Add task
-              </button>
-              <div className="patients-column-headers">
-                <p>Assignee</p>
-                <p>Due</p>
-              </div>
-            </div>
-            <div className="patient-tasks">{tasksList}</div>
-          </div> */}
           <div className="tasks-container">
             <div className="info-general">
               <div className="info-gral-patient">
